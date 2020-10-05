@@ -1,0 +1,8 @@
+base_dir: .
+location:
+  state: "Wisconsin"
+  city: "Lake Tomahawk"
+  room: "Upstairs Garage"
+  ambient_sensor:
+      type: DHT11
+      pin: 25
