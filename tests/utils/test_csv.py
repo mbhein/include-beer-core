@@ -11,4 +11,4 @@ def test_csv():
     except:
         pass
     if os.path.exists(test_file):
-        os.remove(test_file
+        os.remove(test_file)
