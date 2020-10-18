@@ -14,12 +14,12 @@ class ConfigManager(object):
 
     Reads all configuration files
     - defaults.yml
-    - ~/include-beer.yml
+    - ~/include-beer/include-beer.yml
     - ENV INCLUDE_BEER_CONFIG
 
     Set configuration values based on order of precedents (lowest to highest)
     - defaults.yml
-    - specified config file (~/beer/include-beer.yml or ENV INCLUDE_BEER_CONFIG)
+    - specified config file (~/include-beer/include-beer.yml or ENV INCLUDE_BEER_CONFIG)
     - Environmental overrides
 
     """
@@ -40,7 +40,7 @@ class ConfigManager(object):
         # if env INCLUDE_BEER_CONFIG is set, always use that
         # elif try ~/include-beer.yml
         # else use base config defaults
-        _expanded_user_config = os.path.expanduser('~/include-beer.yml')
+        _expanded_user_config = os.path.expanduser('~/include-beer/include-beer.yml')
         if os.getenv('INCLUDE_BEER_CONFIG', 0):
             _env_config_file = os.environ['INCLUDE_BEER_CONFIG']
             if os.path.exists(_env_config_file):
